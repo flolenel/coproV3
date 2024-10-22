@@ -129,6 +129,10 @@
             height: auto;
             border-radius: 10px; /* Arrondir les bords de la vidéo */
         }
+        .video-container video {
+    display: block; /* S'assure que le vidéo est affiché comme un bloc */
+    background: black; /* Définit un fond noir pour le rectangle de la vidéo */
+}
         .end-message {
             font-size: 1.2em;
             color: #d32f2f;
@@ -289,6 +293,8 @@
         document.getElementById('next-button').addEventListener('click', () => {
             handleEvent();
 
+            // Retarde le changement de joueur
+    setTimeout(() => {
             currentPlayer++;
             if (currentPlayer > players) {
                 currentPlayer = 1;
@@ -296,6 +302,7 @@
             }
 
             updateInfo(); // Met à jour les informations de jeu
+            }, 500); // 500 millisecondes de retard
         });
 
         // Démarrage du jeu
