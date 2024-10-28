@@ -263,11 +263,11 @@
             let videoPath = '';
 
             if (eventType === 'concierge') {
-                videoPath = `videos/video_concierge/concierge_${Math.floor(Math.random() * 3) + 1}.mp4`; // Sélectionne aléatoirement une vidéo
+                videoPath = `videos/video_concierge/concierge_${Math.floor(Math.random() * 4) + 1}.mp4`; // Sélectionne aléatoirement une vidéo
             } else if (eventType === 'courrier') {
                 videoPath = `videos/video_courrier/courrier_${Math.floor(Math.random() * 2) + 1}.mp4`;
             } else {
-                videoPath = `videos/video_no_event/no_event_${Math.floor(Math.random() * 9) + 1}.mp4`; // Pas d'événement spécifique
+                videoPath = `videos/video_no_event/no_event_${Math.floor(Math.random() * 11) + 1}.mp4`; // Pas d'événement spécifique
             }
 
             if (videoPath) {
@@ -297,7 +297,7 @@
             }
 
             updateInfo(); // Met à jour les informations de jeu
-            }, 500); // 500 millisecondes de retard
+            }, 900); // 500 millisecondes de retard
         });
 
         // Démarrage du jeu
